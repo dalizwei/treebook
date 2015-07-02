@@ -4,7 +4,7 @@
 <%=h link_to "Post a new Status", new_status_path , class: "btn btn-success"%>
 <% @statuses.each do |status| %>
     <div class="status">
-      <strong><%=h status.name %></strong>
+      <strong><%=h status.user.full_name%></strong>
       <p><%=h status.content%></p>
       <div class="meta">
         <%=h link_to time_ago_in_words(status.created_at)+" ago" ,status %>
