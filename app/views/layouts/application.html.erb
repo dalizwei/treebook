@@ -12,15 +12,15 @@
     <div class="container">
       <a href="#" class="navbar-brand">Treebook</a>
       <ul class="nav navbar-nav">
-        <li class=" navbar-link"><%=h link_to "All Statuses", statuses_path %></li>
+        <li class=" navbar-link"><%=h link_to "All Statuses", feed_path %></li>
       </ul>
       <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
             <li><%=h link_to current_user.full_name, edit_user_registration_path %></li>
-            <li><%=h link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+            <li><%=h link_to "Log Out", logout_path %></li>
         <%else%>
-            <li><%=h link_to "Register",new_user_registration_path %></li>
-            <li><%=h link_to "Log in",new_user_session_path%></li>
+            <li><%=h link_to "Register",register_path %></li>
+            <li><%=h link_to "Log in",login_path%></li>
         <%end%>
       </ul>
     </div>

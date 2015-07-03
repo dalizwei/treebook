@@ -4,7 +4,13 @@ Treebook::Application.routes.draw do
                                     registrations: 'users/registrations',
                                     sessions: "users/sessions",
                                     unlocks: "users/unlocks"  }
+  devise_scope :user do
+    get 'register', to: 'users/registrations#new', as: :register
+    get 'login', to: 'users/sessions#new', as: :login
+    get 'logout', to: 'users/sessions#destroy', as: :logout
+  end
   resources :statuses
+  get 'feed', to: 'statuses#index', as: :feed
   root to:'statuses#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
