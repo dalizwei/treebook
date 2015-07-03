@@ -36,11 +36,20 @@ class UserTest < ActiveSupport::TestCase
 
 
   test "the user should have a well formated prfile name" do
-    user=User.new
+    user=User.new(first_name: 'mohamed', last_name:'ali', email:'mohamed@ali.com')
+    user.password=user.password_confirmation='mohamedali'
     user.profile_name='Profile with spaces'
     assert !user.save, "The user is saved"
     assert !user.errors[:profile_name].empty?, "There are no errors related to the format on the profile name field"
     assert user.errors[:profile_name].include?('Profile name must be formatted correctly.'),"The error generated doesn't match the error expected"
+  end
+
+  test "A user can have a correctly formated profile " do
+    user=User.new(first_name: 'mohamed', last_name:'ali', email:'mohamed@ali.com')
+    user.password=user.password_confirmation='mohamedali'
+    user.profile_name='mohamedali'
+    assert user.valid?, "The user correctly formated was not validated"
+
   end
 
 end
