@@ -10,5 +10,7 @@
  *
  *= require_self
  *= require_tree .
+ *= stub "bootstrap.css.map"
+ *= stub "bootstrap-theme.css.map"
  */
 body { padding-top: 70px; }
