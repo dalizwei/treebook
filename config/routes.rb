@@ -1,4 +1,5 @@
 Treebook::Application.routes.draw do
+  get "profiles/show"
   devise_for :users, controllers: { confirmations: "users/confirmations",
                                     passwords: "users/passwords",
                                     registrations: 'users/registrations',
