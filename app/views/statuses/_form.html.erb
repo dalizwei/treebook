@@ -1,8 +1,8 @@
+<div class="row">
 <%= simple_form_for(@status, html: {class: "form-horizontal"}) do |f| %>
   <% if @status.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@status.errors.count, "error") %> prohibited this status from being saved:</h2>
-
       <ul>
       <% @status.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -10,10 +10,45 @@
       </ul>
     </div>
   <% end %>
-        <%=h f.input :user_id%>
-        <%=h f.input :content %>
+
+    <%=h f.input :user_id, html: {class: "col-sm-2"}%>
+    <%=h f.input :content %>
+
 
   <div class="form-actions ">
     <%=h f.button :submit %>
   </div>
 <% end %>
+</div>
+<!--
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-2 control-label" for="inputEmail3">Email</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="inputEmail3" placeholder="Email" type="email">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+          <input class="form-control" id="inputPassword3" placeholder="Password" type="password">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <label>
+              <input type="checkbox"> Remember me
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Sign in</button>
+        </div>
+      </div>
+    </form>
+-->
+
+
