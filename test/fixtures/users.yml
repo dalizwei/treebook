@@ -13,10 +13,12 @@ dali:
   first_name: "Mohamed ali"
   last_name: "Sfari"
   profile_name: "Profile"
-  email: "mohamed.ali.sfari@gmail.com"
+  email: "mohamed.ali@sfari.com"
   #password: "password"
   #password_confirmation: "password"
 
-
-
-
+youssef:
+  first_name: "youssef"
+  last_name: "tourki"
+  profile_name: "Profile2"
+  email: "youssef@tourki.com"
