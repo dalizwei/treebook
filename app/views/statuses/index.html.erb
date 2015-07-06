@@ -4,14 +4,22 @@
 <%=h link_to "Post a new Status", new_status_path , class: "btn btn-success"%>
 <% @statuses.each do |status| %>
     <div class="status">
-      <strong><%=h status.user.full_name %></strong>
-      <p><%=h status.content%></p>
-      <div class="meta">
-        <%=h link_to time_ago_in_words(status.created_at)+" ago" ,status %>
-        <span class="admin">
-          | <%=h link_to "Edit", edit_status_path(status) %> |
-          <%=h link_to "Delete", status, method: :delete, data: {confirm: "are u sure?"} %>
-        </span>
+      <div class="row">
+        <div class="col-md-1">
+            <%=h image_tag status.user.gravatar_url %>
+        </div>
+        <div class="col-md-7">
+
+          <strong><%=h status.user.full_name %></strong>
+          <p><%=h status.content%></p>
+          <div class="meta">
+            <%=h link_to time_ago_in_words(status.created_at)+" ago" ,status %>
+            <span class="admin">
+              | <%=h link_to "Edit", edit_status_path(status) %> |
+              <%=h link_to "Delete", status, method: :delete, data: {confirm: "are u sure?"} %>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
 
