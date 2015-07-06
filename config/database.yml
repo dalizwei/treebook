@@ -59,4 +59,4 @@ production:
   database: treebook_production
   pool: 5
   username: treebook
-  password:
+  password: webforge123
