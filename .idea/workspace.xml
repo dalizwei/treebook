@@ -18,7 +18,7 @@
     <SUITE FILE_PATH="coverage/treebook@Production__treebook.coverage" NAME="Production: treebook Coverage Results" MODIFIED="1436184012706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="treebook" />
     <SUITE FILE_PATH="coverage/treebook@Run_test__profiles_controller_test___treebook.coverage" NAME="Run test 'profiles_controller_test': treebook Coverage Results" MODIFIED="1436176627647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="treebook" />
     <SUITE FILE_PATH="coverage/treebook@registrations_controller.coverage" NAME="registrations_controller Coverage Results" MODIFIED="1435853394994" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app/controllers/users" MODULE_NAME="treebook" />
-    <SUITE FILE_PATH="coverage/treebook@Development__treebook.coverage" NAME="Development: treebook Coverage Results" MODIFIED="1436256116073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="treebook" />
+    <SUITE FILE_PATH="coverage/treebook@Development__treebook.coverage" NAME="Development: treebook Coverage Results" MODIFIED="1436274914608" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="treebook" />
     <SUITE FILE_PATH="coverage/treebook@Run_test__custom_routes_test___treebook.coverage" NAME="Run test 'custom_routes_test': treebook Coverage Results" MODIFIED="1436176635866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="treebook" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -50,11 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5555556">
+            <state vertical-scroll-proportion="0.0">
               <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="statuses.js.coffee" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/statuses.js.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0952381">
+              <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -97,7 +107,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
         <option value="$PROJECT_DIR$/app/views/statuses/index.json.jbuilder" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/statuses.js.coffee" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/statuses.css.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
@@ -133,6 +142,7 @@
         <option value="$PROJECT_DIR$/app/controllers/statuses_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/statuses/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/statuses.js.coffee" />
       </list>
     </option>
   </component>
@@ -262,6 +272,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="treebook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="treebook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="treebook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="treebook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -658,13 +708,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.6551723">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.86764705">
@@ -944,14 +987,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5555556">
@@ -992,14 +1027,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/statuses_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/statuses/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.666667">
@@ -1026,8 +1053,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5555556">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/statuses_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/statuses.js.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0952381">
+          <caret line="2" column="57" selection-start-line="2" selection-start-column="57" selection-end-line="2" selection-end-column="57" />
           <folding />
         </state>
       </provider>
