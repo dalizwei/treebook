@@ -14,10 +14,12 @@
           <p><%=h status.content%></p>
           <div class="meta">
             <%=h link_to time_ago_in_words(status.created_at)+" ago" ,status %>
+            <% if policy(status).destroy? %>
             <span class="admin">
               | <%=h link_to "Edit", edit_status_path(status) %> |
               <%=h link_to "Delete", status, method: :delete, data: {confirm: "are u sure?"} %>
             </span>
+            <% end %>
           </div>
         </div>
       </div>

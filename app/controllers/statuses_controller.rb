@@ -1,11 +1,11 @@
 class StatusesController < ApplicationController
   before_action :set_status, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user! #, only: [:new, :create, :edit, :update, :destroy]
 
   # GET /statuses
   # GET /statuses.json
   def index
-    @statuses = Status.all
+    @statuses = Status.all.reverse_order
   end
 
   # GET /statuses/1
@@ -20,6 +20,7 @@ class StatusesController < ApplicationController
 
   # GET /statuses/1/edit
   def edit
+    authorize @status
   end
 
   # POST /statuses
