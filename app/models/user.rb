@@ -24,5 +24,8 @@ class User < ActiveRecord::Base
     hash = Digest::MD5.hexdigest(downcased_email)
     "https://gravatar.com/avatar/#{hash}"
   end
+  def admin?
+    false
+  end
 
 end
