@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :statuses
+  has_and_belongs_to_many :roles, join_table: 'users_roles'
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :profile_name, presence:true,
@@ -25,7 +26,7 @@ class User < ActiveRecord::Base
     "https://gravatar.com/avatar/#{hash}"
   end
   def admin?
-    false
+      roles.where(role_name: 'admin').size == 1
   end
 
 end

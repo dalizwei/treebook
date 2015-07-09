@@ -8,6 +8,6 @@ class StatusPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user.admin? or user.id == record.user.id
+    user.admin?
   end
 end
