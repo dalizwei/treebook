@@ -8,9 +8,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+   def create
+     super
+     if resource.persisted?
+       resource.add_user_role
+     end
+   end
 
   # GET /resource/edit
   # def edit

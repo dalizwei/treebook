@@ -25,6 +25,12 @@ class User < ActiveRecord::Base
     hash = Digest::MD5.hexdigest(downcased_email)
     "https://gravatar.com/avatar/#{hash}"
   end
+  def add_user_role
+    roles<<Role.where(role_name: 'user')
+  end
+  def add_role(role)
+    roles<<Role.where(role_name: role)
+  end
   def admin?
       roles.where(role_name: 'admin').size == 1
   end
