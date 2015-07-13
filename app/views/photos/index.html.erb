@@ -1,0 +1,14 @@
+<% @photos.each do |photo| %>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src=<%=h photo.thumb_link %> alt="...">
+          <div class="caption">
+            <h3><%=h photo.photo_name %></h3>
+            <p><%=h photo.photo_descript %></p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+<%end%>

@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :statuses
+  has_many :photos
   has_and_belongs_to_many :roles, join_table: 'users_roles'
   validates :first_name, presence: true
   validates :last_name, presence: true
