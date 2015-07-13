@@ -1,5 +1,5 @@
-<% @photos.each do |photo| %>
-    <div class="row">
+<div class="row">
+  <% @photos.each do |photo| %>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
           <img src=<%=h photo.thumb_link %> alt="...">
@@ -10,5 +10,5 @@
           </div>
         </div>
       </div>
-    </div>
-<%end%>
+  <%end%>
+</div>

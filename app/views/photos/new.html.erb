@@ -1,0 +1,24 @@
+
+    <%= simple_form_for(@photo, html: {class: "form-horizontal"}) do |f| %>
+            <% if @photo.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@photo.errors.count, "error") %> prohibited this status from being saved:</h2>
+                  <ul>
+                    <% @photo.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                  </ul>
+                </div>
+            <% end %>
+
+            <%=h f.input :photo_link %>
+            <%=h f.input :photo_name %>
+            <%=h f.input :thumb_link %>
+            <%=h f.input :photo_tag %>
+            <%=h f.input :photo_descript %>
+            <%=h f.input :visibility %>
+
+            <div class="form-actions ">
+              <%=h f.button :submit %>
+            </div>
+    <% end %>
