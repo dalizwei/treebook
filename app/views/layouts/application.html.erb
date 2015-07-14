@@ -13,10 +13,11 @@
       <a href="#" class="navbar-brand">Treebook</a>
       <ul class="nav navbar-nav">
         <li class=" navbar-link"><%=h link_to "All Statuses", feed_path %></li>
+        <li class=" navbar-link"><%=h link_to "All Photos", photos_path %></li>
       </ul>
       <ul class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
-            <li><%=h link_to current_user.full_name, edit_user_registration_path %></li>
+            <li><%=h link_to current_user.full_name, profile_info_path(current_user.profile_name) %></li>
             <li><%=h link_to "Log Out", logout_path %></li>
         <%else%>
             <li><%=h link_to "Register",register_path %></li>

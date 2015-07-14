@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :test
+  #before_action :test
   #before_action :authenticate_user! #, only: [:new, :create, :edit, :update, :destroy]
 
   # GET /photos
@@ -11,7 +11,7 @@ class PhotosController < ApplicationController
   # GET /photos/1
   # GET /photos/1.json
   def show
-
+    @photo = Photo.find(params[:id])
   end
 
   # GET /photos/new
@@ -42,10 +42,6 @@ class PhotosController < ApplicationController
 
   def destroy
 
-  end
-
-  def test
-    true
   end
 
   def photo_params

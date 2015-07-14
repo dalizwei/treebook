@@ -15,7 +15,7 @@ Treebook::Application.routes.draw do
   resources :statuses
   resources :photos
   get 'feed', to: 'statuses#index', as: :feed
-  get '/users/:id', to: 'profiles#show'
+  get '/users/:id', to: 'profiles#show', as: :profile_info
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

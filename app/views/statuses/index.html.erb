@@ -10,7 +10,7 @@
         </div>
         <div class="col-md-7">
 
-          <strong><%=h status.user.full_name %></strong>
+          <strong><%=h link_to status.user.full_name, profile_info_path(status.user.profile_name) %></strong>
           <p><%=h status.content%></p>
           <div class="meta">
             <%=h link_to time_ago_in_words(status.created_at)+" ago" ,status %>
