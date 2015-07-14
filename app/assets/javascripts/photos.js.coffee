@@ -24,7 +24,7 @@ populate = ->
 
 #start refresh
 refresh = ->
-  refreshURL = "http://0.0.0.0:3000/photos.json"
+  refreshURL = window.location.protocol+'//'+window.location.host+'/photos.json'
   refreshOptions = {};
   displayPhotos = (data)->
     tempHTML=''
