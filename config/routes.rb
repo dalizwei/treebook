@@ -5,7 +5,7 @@ Treebook::Application.routes.draw do
                                     registrations: 'users/registrations',
                                     sessions: "users/sessions",
                                     unlocks: "users/unlocks"  }
-  root to:'users/sessions#new'
+  root to:'statuses#index'
   devise_scope :user do
     get 'register', to: 'users/registrations#new', as: :register
     get 'login', to: 'users/sessions#new', as: :login
