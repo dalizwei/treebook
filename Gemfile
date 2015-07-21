@@ -47,4 +47,8 @@ end
 gem 'devise'
 gem 'pundit'
 gem 'simple_form'
-gem 'rspec'
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
+  gem 'cucumber'
+end
