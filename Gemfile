@@ -47,8 +47,11 @@ end
 gem 'devise'
 gem 'pundit'
 gem 'simple_form'
-group :development, :test do
+
+group  :test, :development do
   gem 'rspec-rails', '~> 3.0'
   gem 'capybara'
   gem 'cucumber'
+  gem 'cucumber-rails', require: false, git:'https://github.com/cucumber/cucumber-rails.git'
+  gem 'database_cleaner'
 end
