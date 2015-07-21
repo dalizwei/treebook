@@ -54,4 +54,5 @@ group  :test, :development do
   gem 'cucumber'
   gem 'cucumber-rails', require: false, git:'https://github.com/cucumber/cucumber-rails.git'
   gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end

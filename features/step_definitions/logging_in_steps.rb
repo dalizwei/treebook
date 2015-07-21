@@ -18,5 +18,5 @@ end
 
 Then(/^I should get to Statuses$/) do
 
-    assert page.has_content?("Statuses")
+    assert page.has_content?("All of the Statuses")
 end
