@@ -53,4 +53,4 @@ ActionController::Base.allow_rescue = false
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
 
-Cucumber::Rails::World.use_transactional_fixtures = false
+#Cucumber::Rails::World.use_transactional_fixtures = false

@@ -47,7 +47,7 @@ development:
 test: &test
   adapter: postgresql
   encoding: unicode
-  database: treebook_development
+  database: treebook_test
   host: localhost
   pool: 5
   username: treebook

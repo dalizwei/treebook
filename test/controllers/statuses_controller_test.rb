@@ -6,6 +6,7 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
+    sign_in users(:dali)
     get :index
     assert_response :success
     assert_not_nil assigns(:statuses)
@@ -38,6 +39,7 @@ class StatusesControllerTest < ActionController::TestCase
   end
 
   test "should show status" do
+    sign_in users(:dali)
     get :show, id: @status
     assert_response :success
   end
@@ -66,12 +68,12 @@ class StatusesControllerTest < ActionController::TestCase
     assert_redirected_to status_path(assigns(:status))
   end
 
-  test "should destroy status when logged in" do
+  test "Can't destroy status when logged in and not admin" do
     sign_in users(:dali)
-    assert_difference('Status.count', -1) do
+    assert_difference('Status.count', 0) do
       delete :destroy, id: @status
     end
-
-    assert_redirected_to statuses_path
+# TODO: correction
+    assert_response 302
   end
 end

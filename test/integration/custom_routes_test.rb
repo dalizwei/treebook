@@ -18,7 +18,7 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
   test "That a profile page work" do
-    get '/Profile'
+    get '/users/' + users(:dali).profile_name
     assert_response :success
   end
 
