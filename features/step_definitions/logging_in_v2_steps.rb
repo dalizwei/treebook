@@ -9,5 +9,5 @@ end
 
 Then(/^I should get to Statuses v2$/) do
 
-    assert page.has_content?("All of the Statuses HAHAHA")
+    assert page.has_content?("All of the Statuses")
 end
