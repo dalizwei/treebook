@@ -74,6 +74,6 @@ class StatusesControllerTest < ActionController::TestCase
       delete :destroy, id: @status
     end
 # TODO: correction
-    assert_response 304
+    assert_response 302
   end
 end
