@@ -13,7 +13,11 @@ Treebook::Application.routes.draw do
   end
 
   resources :statuses
-  resources :photos
+  resources :photos do
+    collection do
+      get '/ammar', to: 'photos#get_last_flickr_photo'
+    end
+  end
   get 'feed', to: 'statuses#index', as: :feed
   get '/users/:id', to: 'profiles#show', as: :profile_info
 

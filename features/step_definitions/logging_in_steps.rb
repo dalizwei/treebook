@@ -1,4 +1,3 @@
-require File.expand_path('../../../framework/pages/login_page', __FILE__)
 Given(/^I am on logging page$/) do
   LoginPage.goto
 end
@@ -17,5 +16,5 @@ end
 
 Then(/^I should get to Statuses$/) do
 
-    assert page.has_content?("All of the Statuses")
+    StatusesPage.is_at
 end

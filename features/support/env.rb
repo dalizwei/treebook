@@ -54,3 +54,9 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 
 
 #Cucumber::Rails::World.use_transactional_fixtures = false
+
+
+
+#FactoryGirl.factories.clear
+FactoryGirl.definition_file_paths = %W(framework/factories)
+FactoryGirl.reload

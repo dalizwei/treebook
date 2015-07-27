@@ -1,5 +1,3 @@
-require File.expand_path('../../../framework/pages/register_page', __FILE__)
-
 Given(/^I am on signing up page$/) do
   RegisterPage.goto
 end

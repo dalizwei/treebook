@@ -1,7 +1,8 @@
-require_relative 'page'
+#require_relative 'page' #no need if framework is under app/feature *i dont know the reason
 class RegisterPage < Page
 
   Path = Rails.application.routes.url_helpers.register_path
+  Title=''
   First_name_field ='user_first_name'
   Last_name_field ='user_last_name'
   Profile_name_field ='user_profile_name'

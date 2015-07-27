@@ -24,7 +24,7 @@ populate = ->
 
 #start refresh
 refresh = ->
-  refreshURL = window.location.protocol+'//'+window.location.host+'/photos.json'
+  refreshURL = '/photos.json'
   refreshOptions = {};
   displayPhotos = (data)->
     tempHTML=''
@@ -45,9 +45,31 @@ refresh = ->
   $.getJSON(refreshURL, refreshOptions, displayPhotos);
 #end refresh
 
+refresh2 = ->
+  refreshURL = '/photos/ammar'
+  refreshOptions = {};
+  displayPhotos = (data)->
+    tempHTML=''
+    $('#list_photos').html(tempHTML)
+    $.each(data, (i, photo)->
+      tempHTML += '<div class="col-sm-6 col-md-4">'
+      tempHTML += '<div class="thumbnail">'
+      #tempHTML += '<img src="'+photo.media.m+'"alt="...">'
+      tempHTML += '<div class="caption">'
+      tempHTML += '<h3>'+photo.title+'</h3>'
+      tempHTML += '<p>'+photo.description+'</p>'
+      tempHTML += '<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>'
+      tempHTML += '</div>'
+      tempHTML += '</div>'
+      tempHTML += '</div>'
+    );
+    $('#list_photos').html(tempHTML)
+  $.getJSON(refreshURL, refreshOptions, displayPhotos);
+#end refresh
+
 initialize = ->
   $('#photo_photo_link').on('change', populate)
-  $('#refresh_button').on('click', refresh)
+  $('#refresh_button').on('click', refresh2)
 
 $(document).ready initialize
 $(document).on 'page:load', initialize
