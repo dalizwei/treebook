@@ -57,6 +57,6 @@ Cucumber::Rails::Database.javascript_strategy = :truncation
 
 
 
-#FactoryGirl.factories.clear
-FactoryGirl.definition_file_paths = %W(framework/factories)
-FactoryGirl.reload
+#FactoryGirl.factories.clear                                 #no need if framework is under app/feature *i dont know the reason
+#FactoryGirl.definition_file_paths = %W(framework/factories) #no need if framework is under app/feature *i dont know the reason
+#FactoryGirl.reload                                          #no need if framework is under app/feature *i dont know the reason

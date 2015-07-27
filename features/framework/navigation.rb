@@ -1,7 +1,7 @@
 
 module Navigation
   include Capybara::DSL
-  include MiniTest::Assertions
+  #include MiniTest::Assertions  # no need if framework is under app/feature *i dont know the reason
   def goto
     visit self::Path
   end
