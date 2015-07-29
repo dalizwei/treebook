@@ -4,7 +4,6 @@
 
 #start def populate
 populate = ->
-
   flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"
   animal = 'dog'
   flickerOptions = {
@@ -18,6 +17,22 @@ populate = ->
     $('#photo_photo_descript').val(data.items[0].description)
     $('#descript_visu').html(data.items[0].description)
     $('#photo_photo_tag').val(data.items[0].tags)
+  $.getJSON(flickerAPI, flickerOptions, populateFields);
+#end def populate
+
+#start def populate
+populate2 = ->
+
+  flickerAPI ='/photos/ammar'
+  animal = 'dog'
+  flickerOptions = {};
+  populateFields = (data)->
+    $('#photo_photo_link').val(data[0].link)
+    $('#photo_photo_name').val(data[0].title)
+    $('#photo_thumb_link').val(data[0].media.m)
+    $('#photo_photo_descript').val(data[0].description)
+    $('#descript_visu').html(data[0].description)
+    $('#photo_photo_tag').val(data[0].tags)
 
   $.getJSON(flickerAPI, flickerOptions, populateFields);
 #end def populate
@@ -68,7 +83,7 @@ refresh2 = ->
 #end refresh
 
 initialize = ->
-  $('#photo_photo_link').on('change', populate)
+  $('#photo_photo_link').on('change', populate2)
   $('#refresh_button').on('click', refresh2)
 
 $(document).ready initialize

@@ -45,7 +45,7 @@ class PhotosController < ApplicationController
   end
 
   def get_last_flickr_photo
-    flickrAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?"
+    flickrAPI = 'https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?'
     animal = 'dog'
     flickr_option = {
         tags: animal,

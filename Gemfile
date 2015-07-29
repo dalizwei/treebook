@@ -57,6 +57,7 @@ group  :test, :development do
   gem 'selenium-webdriver'
   gem 'factory_girl'
   gem 'faker'
+  gem 'webmock'
 end
 
 gem 'httparty'

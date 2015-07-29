@@ -4,11 +4,11 @@ Given(/^I am on logging page$/) do
 end
 
 When(/^I enter an e\-mail$/) do
-    LoginPage.fill_email_field_with
+    LoginPage.fill_email_field
 end
 
 And(/^I enter a password$/) do
-  LoginPage.fill_password_field_with
+  LoginPage.fill_password_field
 end
 
 And(/^I press log in$/) do
