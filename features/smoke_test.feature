@@ -7,7 +7,6 @@ Feature: A user can register
     Given I am on signing up page
     When I sign up
     Then I should get to Statuses
-    When I press new status
     When I Log out
     Then I should get on Login page
     When I log in
