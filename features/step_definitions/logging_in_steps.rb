@@ -1,13 +1,14 @@
 Given(/^I am on logging page$/) do
+  RegisterPage.register_without_browser
   LoginPage.goto
 end
 
 When(/^I enter an e\-mail$/) do
-  fill_in LoginPage::Email_field , :with => "mohamed.ali@sfari.com"
+    LoginPage.fill_email_field_with
 end
 
 And(/^I enter a password$/) do
-  fill_in LoginPage::Password_field , :with => "12345678"
+  LoginPage.fill_password_field_with
 end
 
 And(/^I press log in$/) do
@@ -17,4 +18,12 @@ end
 Then(/^I should get to Statuses$/) do
 
     StatusesPage.is_at
+end
+
+Then(/^I should get on Login page$/) do
+  LoginPage.is_at
+end
+
+When(/^I Log out$/) do
+  LoginPage.log_out
 end

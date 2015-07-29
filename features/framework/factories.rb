@@ -1,6 +1,5 @@
 require 'factory_girl'
 require 'faker'
-
 FactoryGirl.define do
 
   # user definition
@@ -30,7 +29,7 @@ FactoryGirl.define do
   end
 
   factory :user_with_statuses do
-    # posts_count is declared as a transient attribute and available in
+    # statuses_count is declared as a transient attribute and available in
     # attributes on the factory, as well as the callback via the evaluator
     transient do
       statuses_count 5
@@ -39,7 +38,7 @@ FactoryGirl.define do
     # the after(:create) yields two values; the user instance itself and the
     # evaluator, which stores all values from the factory, including transient
     # attributes; `create_list`'s second argument is the number of records
-    # to create and we make sure the user is associated properly to the post
+    # to create and we make sure the user is associated properly to the status
     after(:create) do |user, evaluator|
       create_list(:post, evaluator.statuses_count, user: user)
     end

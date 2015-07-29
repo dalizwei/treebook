@@ -2,6 +2,7 @@ require_relative '../navigation'
 class Page
   Path='/'
   Title = ''
-#  include Capybara::DSL
+  My_identifiers=''
+
   extend Navigation
 end

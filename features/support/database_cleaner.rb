@@ -8,11 +8,5 @@ rescue NameError
 end
 
 Around do |scenario, block|
-  if scenario.name=='logging in as a user'
-    #u = User.new(:first_name=>'Mohamed ali', :last_name=>'Sfari', :profile_name=>'meds', :email => 'mohamed.ali@sfari.com', :password => '12345678', :password_confirmation => '12345678')
-
-    @login_user= FactoryGirl.create(:user)
-
-  end
   DatabaseCleaner.cleaning(&block)
 end

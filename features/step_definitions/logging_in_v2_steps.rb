@@ -1,9 +1,10 @@
 Given(/^I am on logging page v2$/) do
+  RegisterPage.register_without_browser
   LoginPage.goto
 end
 
 When(/^I log in$/) do
-  LoginPage.log_in_as @login_user
+  LoginPage.log_in_as
 end
 
 

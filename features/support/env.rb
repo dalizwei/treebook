@@ -51,12 +51,3 @@ ActionController::Base.allow_rescue = false
 # The :transaction strategy is faster, but might give you threading problems.
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
-
-
-#Cucumber::Rails::World.use_transactional_fixtures = false
-
-
-
-#FactoryGirl.factories.clear                                 #no need if framework is under app/feature *i dont know the reason
-#FactoryGirl.definition_file_paths = %W(framework/factories) #no need if framework is under app/feature *i dont know the reason
-#FactoryGirl.reload                                          #no need if framework is under app/feature *i dont know the reason
